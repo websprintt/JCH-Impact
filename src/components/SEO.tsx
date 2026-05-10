@@ -11,7 +11,7 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "HomeAndConstructionBusiness",
     "name": "JCH.Impact",
     "image": "https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-1.webp",
     "description": seo.description,
@@ -28,6 +28,11 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
     },
     "url": "https://ais-dev-cy6qiq6liliiqbvbe7sc5b-372441323539.europe-west2.run.app",
     "telephone": "+17862345403",
+    "areaServed": translations[lang].areasServed.cities.map(city => ({
+      "@type": "City",
+      "name": city,
+      "sameAs": `https://en.wikipedia.org/wiki/${city.replace(' ', '_')},_Florida`
+    })),
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -43,7 +48,27 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
         "closes": "18:00"
       }
     ],
-    "priceRange": "$$"
+    "priceRange": "$$",
+    "knowsAbout": [
+      "Impact Windows",
+      "Impact Doors",
+      "Hurricane Protection",
+      "Professional Caulking",
+      "Florida Building Code",
+      "Window Repair"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Impact System Services",
+      "itemListElement": translations[lang].services.list.map((service, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description
+        }
+      }))
+    }
   };
 
   return (
