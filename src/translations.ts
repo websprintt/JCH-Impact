@@ -21,11 +21,11 @@ export const translations = {
       callNow: 'Llamar ahora',
     },
     hero: {
-      badge: 'Instalación y Reparación de Ventanas y Puertas',
+      badge: 'Especialistas en Instalación para Contratistas y Particulares',
       title: 'Instalación Profesional de Puertas y Ventanas de Impacto en ',
       titlePremium: 'el Sur de Florida',
       titleSuffix: '',
-      subtitle: 'Especialistas licenciados y asegurados en ventanas de impacto, puertas, sellado profesional (caulking) para propiedades residenciales y comerciales. Servicio rápido, trabajo limpio y estimados gratis.',
+      subtitle: 'Ofrecemos servicios especializados de instalación, reparación y sellado profesional (caulking) para contratistas generales y dueños de propiedades residenciales o comerciales. Calidad y precisión garantizada.',
       estimateBtn: 'Presupuesto Gratis',
       installationBtn: 'Reparaciones Rápidas',
       features: {
@@ -75,9 +75,9 @@ export const translations = {
           features: ["Residencial", "Comercial", "Acabados Premium"],
         },
         {
-          title: "Proyectos Comerciales",
-          description: "Soluciones confiables a gran escala para oficinas, negocios y edificios comerciales con estándares de alto tráfico.",
-          features: ["Oficinas", "Edificios", "Contratos Comerciales"],
+          title: "Colaboración con Contratistas",
+          description: "Somos el socio estratégico para contratistas generales que buscan sub-contratar la instalación experta de sistemas de impacto con precisión técnica.",
+          features: ["Sub-contratación", "Aliado Profesional", "Cumplimiento de Plazos"],
         }
       ]
     },
@@ -134,9 +134,9 @@ export const translations = {
         { title: 'Acceso a Terraza', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-5.webp' },
         { title: 'Puerta Deslizante de Impacto', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-6.webp' },
         
-        { title: 'Edificio Comercial Miami', category: 'Comercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840323?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
-        { title: 'Distribuidora Local', category: 'Comercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840336?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
-        { title: 'Centro de Negocios', category: 'Comercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' }
+        { title: 'Edificio Comercial Miami', category: 'Comercial', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-3.webp', videoUrl: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-3.webp' },
+        { title: 'Distribuidora Local', category: 'Comercial', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-4.webp', videoUrl: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-4.webp' },
+        { title: 'Centro de Negocios', category: 'Comercial', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-2.webp', videoUrl: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-2.webp' }
       ]
     },
     areasServed: {
@@ -160,9 +160,9 @@ export const translations = {
       rights: '© 2026 JCH.Impact. Todos los derechos reservados.'
     },
     seo: {
-      title: 'Ventanas y Puertas de Impacto en Miami y Sur de Florida | JCH.Impact',
-      description: 'Especialistas licenciados en instalación de ventanas y puertas de impacto en Miami, Hollywood y Fort Lauderdale. Sellado profesional y reparaciones. ¡Estimados Gratis!',
-      keywords: 'ventanas de impacto miami, puertas de impacto florida, proteccion contra huracanes, instalacion de ventanas, caulking profesional florida, JCH Impact',
+      title: 'JCH.Impact | Instalación y Reparación de Ventanas de Impacto en Miami',
+      description: 'Expertos bajo licencia en ventanas y puertas de impacto en el Sur de Florida. Servicios de instalación para contratistas y particulares, reparación y sellado (caulking) profesional. De Homestead a Fort Lauderdale.',
+      keywords: 'ventanas de impacto miami, reparacion de ventanas florida, subcontratista ventanas miami, caulking profesional florida, puertas de impacto hollywood fl, proteccion huracanes miami, JCH Impact',
     }
   },
   en: {
@@ -177,11 +177,11 @@ export const translations = {
       callNow: 'Call Now',
     },
     hero: {
-      badge: 'Window & Door Installation & Repair Specialist',
+      badge: 'Installation Specialists for Contractors & Homeowners',
       title: 'Professional Impact Windows & Doors Installation in ',
       titlePremium: 'South Florida',
       titleSuffix: '',
-      subtitle: 'Licensed & insured specialists in impact windows, doors, caulking and professional sealing for residential & commercial properties. Fast service, clean work and free estimates.',
+      subtitle: 'Providing specialized installation, repair, and professional sealing (caulking) for general contractors and residential or commercial property owners. Precision and quality guaranteed.',
       estimateBtn: 'Free Estimate',
       installationBtn: 'Fast Service/Repairs',
       features: {
@@ -231,9 +231,9 @@ export const translations = {
           features: ["Residential", "Commercial", "Premium Finishes"],
         },
         {
-          title: "Commercial Projects",
-          description: "Reliable large-scale solutions for offices, businesses, and commercial buildings with high-traffic standards.",
-          features: ["Offices", "Buildings", "Commercial Contracts"],
+          title: "Contractor Partnerships",
+          description: "The strategic partner for general contractors looking to sub-contract expert installation of impact systems with high technical precision.",
+          features: ["Sub-contracting", "Professional Ally", "Deadline Oriented"],
         }
       ]
     },
@@ -290,9 +290,9 @@ export const translations = {
         { title: 'Terrace Access', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-5.webp' },
         { title: 'Impact Sliding Door', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-6.webp' },
         
-        { title: 'Miami Commercial Building', category: 'Commercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840323?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
-        { title: 'Local Distribution Center', category: 'Commercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840336?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
-        { title: 'Business Center', category: 'Commercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' }
+        { title: 'Miami Commercial Building', category: 'Commercial', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-3.webp', videoUrl: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-3.webp' },
+        { title: 'Local Distribution Center', category: 'Commercial', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-4.webp', videoUrl: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-4.webp' },
+        { title: 'Business Center', category: 'Commercial', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-2.webp', videoUrl: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/207065862c5927bff055e484002e999b473dd3f1/img/comercial-2.webp' }
       ]
     },
     areasServed: {
@@ -316,9 +316,9 @@ export const translations = {
       rights: '© 2026 JCH.Impact. All rights reserved.'
     },
     seo: {
-      title: 'Impact Windows & Doors Miami & South Florida | JCH.Impact',
-      description: 'Licensed specialists in impact window and door installation in Miami, Hollywood, and Fort Lauderdale. Professional sealing and repairs. Free Estimates!',
-      keywords: 'impact windows miami, impact doors florida, hurricane protection, window installation, professional caulking florida, JCH Impact',
+      title: 'JCH.Impact | Impact Window & Door Installation & Repair in Miami',
+      description: 'Licensed specialists in impact windows and doors across South Florida. Professional installation for contractors and homeowners, expert repairs, and premium caulking. From Homestead to Fort Lauderdale.',
+      keywords: 'impact windows miami, impact window repair florida, contractor impact window installation, professional caulking south florida, impact doors hollywood fl, hurricane protection miami, JCH Impact',
     }
   }
 };

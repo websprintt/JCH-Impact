@@ -67,7 +67,7 @@ const decode = (str: string) => {
   }
 };
 
-const TopBar = ({ lang }: { lang: Language }) => {
+const TopBar = React.memo(({ lang }: { lang: Language }) => {
   return (
     <div className="bg-brand-gold text-brand-dark py-2 px-6 fixed top-0 w-full z-[60] text-center text-sm font-bold shadow-md">
       <div className="max-w-7xl mx-auto flex justify-center items-center gap-4">
@@ -96,7 +96,7 @@ const TopBar = ({ lang }: { lang: Language }) => {
       </div>
     </div>
   );
-};
+});
 
 const FloatingWhatsApp = ({ lang }: { lang: Language }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -146,14 +146,14 @@ const FloatingWhatsApp = ({ lang }: { lang: Language }) => {
   );
 };
 
-const Navbar = ({ lang, setLang }: { lang: Language, setLang: (l: Language) => void }) => {
+const Navbar = React.memo(({ lang, setLang }: { lang: Language, setLang: (l: Language) => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[lang].nav;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -166,6 +166,10 @@ const Navbar = ({ lang, setLang }: { lang: Language, setLang: (l: Language) => v
               src="https://raw.githubusercontent.com/websprintt/JCH-Impact/fb1f6066859f1a3149320d5a12860968dd59f495/img/Logo%20solo%20sin%20fondo.png" 
               alt="JCH Impact Logo" 
               className="w-full h-full object-contain"
+              width={48}
+              height={48}
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
           <span className="text-2xl font-display font-bold tracking-tighter text-brand-cream hidden sm:block">
@@ -297,7 +301,7 @@ const Navbar = ({ lang, setLang }: { lang: Language, setLang: (l: Language) => v
       </AnimatePresence>
     </nav>
   );
-};
+});
 
 const Hero = ({ lang }: { lang: Language }) => {
   const t = translations[lang].hero;
@@ -307,9 +311,11 @@ const Hero = ({ lang }: { lang: Language }) => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600" 
           alt="Modern House" 
           className="w-full h-full object-cover scale-105"
+          fetchPriority="high"
+          loading="eager"
         />
         {/* Animated Dust/Particles feel */}
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #B07D34 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -456,6 +462,9 @@ const BeforeAfter = ({ lang }: { lang: Language }) => {
                 src="https://raw.githubusercontent.com/websprintt/JCH-Impact/4dd7a5bb1441d497e4672d1c48dcab9bbf5ef7c6/img/casa-nueva.webp" 
                 alt="After Installation" 
                 className="w-full h-full object-cover"
+                loading="lazy"
+                width={800}
+                height={500}
               />
               <div className="absolute top-4 right-4 bg-brand-gold text-brand-dark px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">{t.after}</div>
             </div>
@@ -469,6 +478,9 @@ const BeforeAfter = ({ lang }: { lang: Language }) => {
                 src="https://raw.githubusercontent.com/websprintt/JCH-Impact/main/img/casa%20vieja.webp" 
                 alt="Before Installation" 
                 className="w-full h-full object-cover grayscale brightness-75"
+                loading="lazy"
+                width={800}
+                height={500}
               />
               <div className="absolute top-4 left-4 bg-brand-dark text-brand-cream px-3 py-1 rounded text-xs font-bold uppercase tracking-wider border border-brand-cream/20">{t.before}</div>
             </div>
@@ -503,28 +515,29 @@ const BeforeAfter = ({ lang }: { lang: Language }) => {
   );
 };
 
-const Services = ({ lang }: { lang: Language }) => {
+const Services = React.memo(({ lang }: { lang: Language }) => {
   const t = translations[lang].services;
-  const icons = [
+  const icons = useMemo(() => [
     <AppWindow size={32} />,
     <Hammer size={28} />,
     <ShieldCheck size={28} />,
     <LayoutGrid size={28} />,
     <Briefcase size={28} />,
-  ];
-  const images = [
+  ], []);
+  
+  const images = useMemo(() => [
     "https://raw.githubusercontent.com/websprintt/JCH-Impact/86e6f811260a58df8e1ea8e40f9fb7b5d2adf2ac/img/service-1.webp",
     "https://raw.githubusercontent.com/websprintt/JCH-Impact/86e6f811260a58df8e1ea8e40f9fb7b5d2adf2ac/img/service-2.webp",
     "https://raw.githubusercontent.com/websprintt/JCH-Impact/86e6f811260a58df8e1ea8e40f9fb7b5d2adf2ac/img/service-3.webp",
     "https://raw.githubusercontent.com/websprintt/JCH-Impact/86e6f811260a58df8e1ea8e40f9fb7b5d2adf2ac/img/service-4.webp",
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
-  ];
+  ], []);
 
-  const list = t.list.map((item, i) => ({
+  const list = useMemo(() => t.list.map((item, i) => ({
     ...item,
     icon: icons[i],
     image: images[i]
-  }));
+  })), [t.list, icons, images]);
 
   return (
     <section id="services" className="py-24 bg-brand-dark/50">
@@ -566,6 +579,9 @@ const Services = ({ lang }: { lang: Language }) => {
                   src={service.image} 
                   alt={service.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-30 md:opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60" 
+                  loading="lazy"
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent z-10" />
               </div>
@@ -613,7 +629,7 @@ const Services = ({ lang }: { lang: Language }) => {
       </div>
     </section>
   );
-};
+});
 
 const Benefits = ({ lang }: { lang: Language }) => {
   const t = translations[lang].benefits;
@@ -709,6 +725,9 @@ const Benefits = ({ lang }: { lang: Language }) => {
                             src="https://raw.githubusercontent.com/websprintt/JCH-Impact/cbf1412cd6ee6b4d77719da0f9fe4881226270c1/img/diferencia.webp" 
                             alt="Quality Work" 
                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                            loading="lazy"
+                            width={500}
+                            height={600}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
                     </div>
@@ -812,12 +831,12 @@ const Gallery = ({ lang }: { lang: Language }) => {
   };
 
   useEffect(() => {
-    if (isHovered || filteredProjects.length <= itemsPerPage) return;
+    if (isHovered || filteredProjects.length <= itemsPerPage || activeCategory === 'Commercial' || activeCategory === 'Comercial') return;
     const timer = setInterval(() => {
       nextSlide();
     }, 4000);
     return () => clearInterval(timer);
-  }, [nextSlide, isHovered, filteredProjects.length, itemsPerPage]);
+  }, [nextSlide, isHovered, filteredProjects.length, itemsPerPage, activeCategory]);
 
   return (
     <section id="portfolio" className="py-32 bg-white/5 relative overflow-hidden">
@@ -915,6 +934,9 @@ const Gallery = ({ lang }: { lang: Language }) => {
                           src={project.image} 
                           alt={project.title} 
                           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                          loading="lazy"
+                          width={400}
+                          height={500}
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-brand-dark via-brand-dark to-brand-gold/10">
@@ -992,7 +1014,7 @@ const Gallery = ({ lang }: { lang: Language }) => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-[500px] h-fit max-h-[90vh] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black"
+              className="relative w-full max-w-[450px] h-fit max-h-[90vh] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black"
               onClick={e => e.stopPropagation()}
             >
               <button 
@@ -1001,21 +1023,32 @@ const Gallery = ({ lang }: { lang: Language }) => {
               >
                 <X size={24} />
               </button>
-              {selectedVideo.includes('vimeo.com') ? (
-                  <iframe
-                    src={`${selectedVideo}${selectedVideo.includes('?') ? '&' : '?'}autoplay=1&loop=1&muted=1&dnt=1`}
-                    className="w-full h-full"
-                    style={{ border: 0 }}
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    referrerPolicy="no-referrer"
-                    allowFullScreen
-                  />
+              {selectedVideo.includes('vimeo.com') || selectedVideo.includes('gumlet.io') || selectedVideo.includes('youtube.com') || selectedVideo.includes('youtu.be') || selectedVideo.includes('drive.google.com') ? (
+                <iframe
+                  src={
+                    selectedVideo.includes('youtube.com') || selectedVideo.includes('youtu.be') 
+                      ? `${selectedVideo}${selectedVideo.includes('?') ? '&' : '?'}autoplay=0&mute=0&loop=1&playlist=${selectedVideo.split('/').pop()?.split('?')[0]}&controls=1&rel=0`
+                    : selectedVideo.includes('drive.google.com')
+                      ? selectedVideo
+                      : `${selectedVideo}${selectedVideo.includes('?') ? '&' : '?'}autoplay=0&muted=0&loop=1&dnt=1`
+                  }
+                  className="w-full h-[100.1%] absolute inset-0"
+                  style={{ border: 0 }}
+                  allow="autoplay; fullscreen; picture-in-picture; accelerometer; gyroscope; encrypted-media; clipboard-write; web-share"
+                  allowFullScreen
+                  title="Video Player"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              ) : selectedVideo.toLowerCase().endsWith('.webp') || selectedVideo.toLowerCase().endsWith('.jpg') || selectedVideo.toLowerCase().endsWith('.png') ? (
+                <img 
+                  src={selectedVideo} 
+                  alt="Project Detail" 
+                  className="w-full h-full object-cover"
+                />
               ) : (
                 <video 
                   className="w-full h-full object-cover" 
                   controls 
-                  autoPlay
-                  muted
                   playsInline
                   preload="auto"
                 >
