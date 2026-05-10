@@ -2,15 +2,17 @@
 export type Language = 'es' | 'en';
 
 export const contactInfo = {
-  // Base64 encoded versions of +17866266502 and 17866266502
-  phone: 'KzE3ODY2MjY2NTAy',
-  whatsappNumber: 'MTc4NjYyNjY1MDI=',
+  // Base64 encoded versions of 7862345403
+  phone: 'Nzg2MjM0NTQwMw==',
+  whatsappNumber: 'Nzg2MjM0NTQwMw==',
+  email: 'SmFhemllbGdibGFuY29AZ21haWwuY29t', // Jaazielgblanco@gmail.com
 };
 
 export const translations = {
   es: {
     whatsapp: {
-      message: 'Hola JCH Impact, me gustaría obtener un presupuesto gratis.',
+      message: 'Hola JCH.Impact, me gustaría obtener un presupuesto gratis.',
+      financeMessage: 'Hola JCH.Impact, me gustaría obtener información sobre las opciones de financiamiento para mis ventanas y puertas de impacto.',
     },
     nav: {
       services: 'Servicios',
@@ -19,98 +21,128 @@ export const translations = {
       callNow: 'Llamar ahora',
     },
     hero: {
-      badge: 'Especialistas en Ventanas y Puertas de Impacto',
-      title: 'Mejora tu hogar con Ventanas y Puertas ',
-      titlePremium: 'Premium',
-      subtitle: 'Ventanas de alta eficiencia energética, puertas de aluminio e instalación de vidrios a medida con un servicio rápido y profesional. Protege a tu familia mientras realzas la belleza de tu hogar.',
+      badge: 'Instalación y Reparación de Ventanas y Puertas',
+      title: 'Instalación Profesional de Puertas y Ventanas de Impacto en ',
+      titlePremium: 'el Sur de Florida',
+      titleSuffix: '',
+      subtitle: 'Especialistas licenciados y asegurados en ventanas de impacto, puertas, sellado profesional (caulking) para propiedades residenciales y comerciales. Servicio rápido, trabajo limpio y estimados gratis.',
       estimateBtn: 'Presupuesto Gratis',
-      installationBtn: 'Instalación Misma Semana',
+      installationBtn: 'Reparaciones Rápidas',
       features: {
-        licensed: 'Licencia y Seguro',
-        estimates: 'Presupuestos Gratis',
-        fast: 'Instalación Rápida',
-        quality: 'Materiales de Alta Calidad',
+        licensed: 'Estimados GRATIS',
+        estimates: 'Servicio Rápido',
+        fast: 'Licencia y Seguro',
+        quality: 'Limpieza Garantizada',
       }
     },
     beforeAfter: {
-      title: 'La Transformación Real',
-      subtitle: 'Mira por qué nuestros clientes eligen JCH Impact. No solo vendemos aluminio, vendemos una apariencia completamente nueva para tu propiedad.',
-      after: 'Después de la Instalación',
-      before: 'Propiedad Antigua',
+      title: 'Transformaciones Reales que Añaden Protección y Valor',
+      subtitle: 'Desde ventanas antiguas y marcos dañados hasta sistemas de impacto instalados profesionalmente que mejoran la seguridad, la apariencia y el valor de la propiedad.',
+      featuresTitle: '¿Qué cambió?',
+      features: [
+        'Mejor protección',
+        'Sellado mejorado',
+        'Apariencia moderna',
+        'Aumento del valor del hogar'
+      ],
+      after: 'Trabajo Terminado',
+      before: 'Estado Anterior',
     },
     services: {
-      title: 'Nuestras Soluciones ',
+      title: 'Nuestros Servicios ',
       titleItalic: 'Principales',
-      subtitle: 'Brindamos servicios de instalación de extremo a extremo para propiedades residenciales y comerciales utilizando solo materiales de la más alta calidad.',
+      subtitle: 'Soluciones de alta calidad con enfoque en ventanas y puertas de impacto para su total tranquilidad.',
       viewAll: 'Ver todos los servicios',
       list: [
         {
-          title: "Instalación de Ventanas",
-          description: "Ventanas de impacto de alto rendimiento diseñadas para el clima de Florida.",
-          features: ["Eficiencia Energética", "Resistente a Huracanes", "Medidas Personalizadas"],
+          title: "Instalación de Ventanas y Puertas de Impacto",
+          description: "Instalación profesional de ventanas y puertas resistentes a huracanes, siguiendo estrictamente el código de Florida para su máxima seguridad.",
+          features: ["Resistente a Huracanes", "Código de FL", "Venta e Instalación"],
         },
         {
-          title: "Instalación de Puertas",
-          description: "Soluciones de entrada seguras y elegantes que marcan la diferencia.",
-          features: ["Puertas Correderas", "Puertas de Patio", "Puertas de Aluminio"],
+          title: "Reparación de Puertas y Ventanas",
+          description: "Reparaciones, ajustes y mantenimiento para restaurar el funcionamiento adecuado de sus sistemas antiguos o dañados.",
+          features: ["Ajustes", "Mantenimiento", "Funcionamiento Total"],
         },
         {
-          title: "Vidrio a Medida",
-          description: "Trabajos en vidrio de lujo para interiores y exteriores adaptados a tu espacio.",
-          features: ["Vidrio para Duchas", "Vidrio para Oficinas", "Sistemas sin Marco"],
+          title: "Sellado Profesional (Caulking)",
+          description: "Sellado interior y exterior premium para evitar filtraciones de agua, humedad e infiltraciones de aire no deseadas.",
+          features: ["Sin Filtraciones", "Cero Humedad", "Sellado Térmico"],
         },
         {
-          title: "Comercial",
-          description: "Acristalamiento de alta resistencia para negocios y oficinas.",
-          features: ["Fachadas de Tiendas", "Oficinas", "Sistemas de Seguridad"],
+          title: "Servicios de Aluminio y Vidrio",
+          description: "Soluciones residenciales y comerciales con acabados de alta calidad en estructuras de aluminio y vidrio.",
+          features: ["Residencial", "Comercial", "Acabados Premium"],
+        },
+        {
+          title: "Proyectos Comerciales",
+          description: "Soluciones confiables a gran escala para oficinas, negocios y edificios comerciales con estándares de alto tráfico.",
+          features: ["Oficinas", "Edificios", "Contratos Comerciales"],
         }
       ]
     },
     benefits: {
-      title: 'Mejor Vida a través de ',
-      titleItalic: 'Ingeniería Premium.',
-      subtitle: 'Nos enfocamos en los beneficios que realmente importan para tu estilo de vida y tu bolsillo.',
+      title: '¿Por qué elegir ',
+      titleItalic: 'JCH.Impact?',
+      subtitle: 'Nos enfocamos en la rapidez, la calidad superior y el máximo respeto por la limpieza de su hogar.',
       items: [
         {
-          title: "Menores facturas de energía",
-          description: "Nuestros sistemas de aislamiento de alta tecnología mantienen el calor fuera y el fresco dentro.",
+          title: "Licencia y Seguro",
+          description: "Trabajamos de manera profesional y segura en cada proyecto.",
         },
         {
-          title: "Mejor aislamiento",
-          description: "Reduce drásticamente el ruido exterior y mantiene temperaturas internas perfectas.",
+          title: "Cumplimiento de Códigos",
+          description: "Cada proyecto sigue los requisitos de permisos y códigos de la ciudad.",
         },
         {
-          title: "Apariencia moderna",
-          description: "Moderniza instantáneamente tu propiedad con líneas elegantes y acabados premium.",
+          title: "Proceso de Trabajo más Limpio",
+          description: "Protegemos su hogar y limpiamos profundamente después de cada proyecto.",
         },
         {
-          title: "Aumento del valor del hogar",
-          description: "Los sistemas de impacto son una de las mejores inversiones para cualquier dueño de casa.",
+          title: "Servicio Rápido",
+          description: "Programación rápida e instalación eficiente sin demoras.",
+        },
+        {
+          title: "Prevención de Filtraciones",
+          description: "Detenga la infiltración de aire y agua en su hogar definitivamente.",
+        },
+        {
+          title: "Valor de Propiedad",
+          description: "Mejore la protección y el atractivo visual de su propiedad.",
         }
       ],
-      fastBadge: 'Instalación Rápida',
-      fastBadgeSub: 'Mejora tu hogar en tan solo 5 días.'
+      fastBadge: 'Servicio Impecable',
+      fastBadgeSub: 'Instalación limpia y profesional garantizada.'
     },
-    social: {
-      title: 'Lo que dicen nuestros clientes',
-      testimonials: [
-        {
-          name: "Michael Rivera",
-          location: "Coral Gables, FL",
-          text: "La diferencia en nuestra factura de energía fue inmediata. JCH Impact fue profesional y las ventanas lucen espectaculares.",
-        },
-        {
-          name: "Sarah Johnson",
-          location: "Miami Beach, FL",
-          text: "Cambiamos nuestras viejas puertas correderas por sus sistemas de impacto. Es como tener una casa nueva. La reducción de ruido es increíble.",
-        },
-        {
-          name: "Robert Chen",
-          location: "Doral, FL",
-          text: "El mejor precio en ventanas de impacto del área. El equipo de instalación fue rápido y detallista. Recomiendo mucho su servicio.",
-        }
-      ],
-      badges: ['CERTIFICADO MIAMI-DADE', 'ENERGY STAR®', 'ACREDITADO BBB A+', 'LICENCIA Y SEGURO']
+    gallery: {
+      title: 'Proyectos ',
+      titleItalic: 'Recientes',
+      subtitle: 'Una muestra de nuestra excelencia en instalación y reparación en todo el sur de Florida.',
+      categories: ['Ventanas', 'Puertas', 'Comercial'],
+      projects: [
+        { title: 'Residencia en Coral Gables', category: 'Ventanas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-1.webp' },
+        { title: 'Modernización en Doral', category: 'Ventanas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-2.webp' },
+        { title: 'Villa en Hollywood', category: 'Ventanas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-3.webp' },
+        { title: 'Apartamento de Lujo', category: 'Ventanas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/8f4931ef0a00ead7d5a7a8fd0ab7afa0e01baf54/img/ventana-4.webp' },
+        { title: 'Vista al Mar Miami', category: 'Ventanas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/aedba366ed50b36d71584a7d9c9f9ed5187dd8a0/img/ventana-5.webp' },
+        { title: 'Residencia Moderna', category: 'Ventanas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-6.webp' },
+        
+        { title: 'Condominio en Miami Beach', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-1.webp' },
+        { title: 'Sistemas Deslizantes Kendall', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-2.webp' },
+        { title: 'Entrada Principal Elegante', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-3.webp' },
+        { title: 'Puertas de Seguridad Premium', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-4.webp' },
+        { title: 'Acceso a Terraza', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-5.webp' },
+        { title: 'Puerta Deslizante de Impacto', category: 'Puertas', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-6.webp' },
+        
+        { title: 'Edificio Comercial Miami', category: 'Comercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840323?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
+        { title: 'Distribuidora Local', category: 'Comercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840336?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
+        { title: 'Centro de Negocios', category: 'Comercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' }
+      ]
+    },
+    areasServed: {
+      title: 'Áreas que Servimos',
+      subtitle: 'Sirviendo con orgullo a clientes residenciales y comerciales en todo el sur de Florida.',
+      cities: ['Homestead', 'Miami', 'Kendall', 'Hialeah', 'Doral', 'Hollywood', 'Pembroke Pines', 'Miramar', 'Davie', 'Weston', 'Plantation', 'Fort Lauderdale']
     },
     cta: {
       title: '¿Listo para mejorar tu hogar?',
@@ -121,12 +153,22 @@ export const translations = {
       projects: 'Proyectos Recientes'
     },
     footer: {
-      rights: '© 2026 JCH Impact Specialists. Todos los derechos reservados. Contratista Licenciado #CGC1234567. Sirviendo a los condados de Miami-Dade, Broward y Palm Beach.'
+      address: 'Hollywood, Florida',
+      serviceArea: 'Homestead hasta Fort Lauderdale',
+      contact: 'Contacto',
+      serviceTitle: 'Área de Servicio',
+      rights: '© 2026 JCH.Impact. Todos los derechos reservados.'
+    },
+    seo: {
+      title: 'Ventanas y Puertas de Impacto en Miami y Sur de Florida | JCH.Impact',
+      description: 'Especialistas licenciados en instalación de ventanas y puertas de impacto en Miami, Hollywood y Fort Lauderdale. Sellado profesional y reparaciones. ¡Estimados Gratis!',
+      keywords: 'ventanas de impacto miami, puertas de impacto florida, proteccion contra huracanes, instalacion de ventanas, caulking profesional florida, JCH Impact',
     }
   },
   en: {
     whatsapp: {
-      message: 'Hi JCH Impact, I would like to get a free estimate.',
+      message: 'Hi JCH.Impact, I would like to get a free estimate.',
+      financeMessage: 'Hi JCH.Impact, I would like to get information about financing options for my impact windows and doors.',
     },
     nav: {
       services: 'Services',
@@ -135,99 +177,128 @@ export const translations = {
       callNow: 'Call Now',
     },
     hero: {
-      badge: 'Impact Windows & Doors Specialist',
-      title: 'Upgrade Your Home With ',
-      titlePremium: 'Premium',
-      titleSuffix: ' Windows & Doors',
-      subtitle: 'Energy-efficient windows, aluminum doors and custom glass installation with fast and professional service. Protect your family while enhancing your home\'s beauty.',
-      estimateBtn: 'Get Free Estimate',
-      installationBtn: 'Same Week Installation',
+      badge: 'Window & Door Installation & Repair Specialist',
+      title: 'Professional Impact Windows & Doors Installation in ',
+      titlePremium: 'South Florida',
+      titleSuffix: '',
+      subtitle: 'Licensed & insured specialists in impact windows, doors, caulking and professional sealing for residential & commercial properties. Fast service, clean work and free estimates.',
+      estimateBtn: 'Free Estimate',
+      installationBtn: 'Fast Service/Repairs',
       features: {
-        licensed: 'Licensed & Insured',
-        estimates: 'Free Estimates',
-        fast: 'Fast Installation',
-        quality: 'High Quality Materials',
+        licensed: 'Free Estimates',
+        estimates: 'Fast Service',
+        fast: 'Licensed & Insured',
+        quality: 'Clean Work Guaranteed',
       }
     },
     beforeAfter: {
-      title: 'The Real Transformation',
-      subtitle: 'See why our clients choose JCH Impact. We don\'t just sell aluminum, we sell a completely new look for your property.',
-      after: 'After Installation',
-      before: 'Old Property',
+      title: 'Real Transformations That Add Protection & Value',
+      subtitle: 'From outdated windows and damaged frames to professionally installed impact systems that improve safety, appearance and property value.',
+      featuresTitle: 'What changed?',
+      features: [
+        'Better protection',
+        'Improved sealing',
+        'Modern appearance',
+        'Increased home value'
+      ],
+      after: 'Finished Work',
+      before: 'Before Status',
     },
     services: {
-      title: 'Our Core ',
-      titleItalic: 'Solutions',
-      subtitle: 'We provide end-to-end installation services for residential and commercial properties using only the highest grade materials.',
+      title: 'Our Main ',
+      titleItalic: 'Services',
+      subtitle: 'High-quality solutions focused on impact windows and doors for your total peace of mind.',
       viewAll: 'View All Services',
       list: [
         {
-          title: "Windows Installation",
-          description: "High-performance impact windows designed for Florida's climate.",
-          features: ["Energy Efficient", "Hurricane Resistant", "Custom Sizing"],
+          title: "Impact Windows & Doors Installation",
+          description: "Professional installation of hurricane-resistant windows and doors, strictly following Florida code for your maximum safety.",
+          features: ["Hurricane Resistant", "FL Code Compliant", "Sales & Install"],
         },
         {
-          title: "Doors Installation",
-          description: "Secure and elegant entryway solutions that make a statement.",
-          features: ["Sliding Doors", "Patio Doors", "Aluminum Doors"],
+          title: "Door & Window Repairs",
+          description: "Repairs, adjustments, and maintenance to restore the proper function of your old or damaged systems.",
+          features: ["Adjustments", "Maintenance", "Full Restoration"],
         },
         {
-          title: "Custom Glass",
-          description: "Luxury interior and exterior glass work tailored to your space.",
-          features: ["Shower Glass", "Office Glass", "Frameless Systems"],
+          title: "Professional Caulking & Sealing",
+          description: "Premium interior and exterior sealing to prevent water leaks, humidity, and unwanted air infiltration.",
+          features: ["No Leaks", "Zero Humidity", "Thermal Seal"],
         },
         {
-          title: "Commercial",
-          description: "Heavy-duty glazing for businesses, storefronts, and offices.",
-          features: ["Storefronts", "Offices", "Safety Systems"],
+          title: "Aluminum & Glass Services",
+          description: "Residential and commercial solutions with high-quality finishes in aluminum and glass structures.",
+          features: ["Residential", "Commercial", "Premium Finishes"],
+        },
+        {
+          title: "Commercial Projects",
+          description: "Reliable large-scale solutions for offices, businesses, and commercial buildings with high-traffic standards.",
+          features: ["Offices", "Buildings", "Commercial Contracts"],
         }
       ]
     },
     benefits: {
-      title: 'Better Living Through ',
-      titleItalic: 'Premium Engineering.',
-      subtitle: 'We focus on the benefits that actually matter to your lifestyle and wallet.',
+      title: 'Why Homeowners ',
+      titleItalic: 'Choose JCH.Impact',
+      subtitle: 'We focus on speed, superior quality, and maximum respect for your home\'s cleanliness.',
       items: [
         {
-          title: "Lower energy bills",
-          description: "Our high-tech insulation systems keep the heat out and the cool in, saving you money monthly.",
+          title: "Licensed & Insured",
+          description: "We work professionally and safely on every project.",
         },
         {
-          title: "Better insulation",
-          description: "Drastically reduce outside noise and maintain perfect internal temperatures year-round.",
+          title: "City Code Compliance",
+          description: "Every project follows permit and code requirements.",
         },
         {
-          title: "Modern appearance",
-          description: "Instantly modernize your property with sleek lines and premium aluminum finishes.",
+          title: "Cleaner Work Process",
+          description: "We protect your home and clean after every project.",
         },
         {
-          title: "Increased home value",
-          description: "Impact systems are one of the best ROI upgrades for any homeowner in hurricane zones.",
+          title: "Fast Service",
+          description: "Quick scheduling and efficient installation.",
+        },
+        {
+          title: "Leak Prevention",
+          description: "Stop air and water infiltration into your home.",
+        },
+        {
+          title: "Increase Property Value",
+          description: "Improve protection and curb appeal of your property.",
         }
       ],
-      fastBadge: 'Fast Install',
-      fastBadgeSub: 'Get your home upgraded in as little as 5 days.'
+      fastBadge: 'Spotless Service',
+      fastBadgeSub: 'Clean and professional installation guaranteed.'
     },
-    social: {
-      title: 'What Our Clients Say',
-      testimonials: [
-        {
-          name: "Michael Rivera",
-          location: "Coral Gables, FL",
-          text: "The difference in our energy bill was immediate. JCH Impact was professional, cleaned up after themselves, and the windows look stunning.",
-        },
-        {
-          name: "Sarah Johnson",
-          location: "Miami Beach, FL",
-          text: "We replaced our old sliding doors with their custom impact systems. It's like having a new house. The sound reduction is incredible.",
-        },
-        {
-          name: "Robert Chen",
-          location: "Doral, FL",
-          text: "Best price for impact windows in the area. The installation crew was fast and detail-oriented. Highly recommend their commercial service too.",
-        }
-      ],
-      badges: ['MIAMI-DADE CERTIFIED', 'ENERGY STAR®', 'A+ BBB ACCREDITED', 'LICENSED & INSURED']
+    gallery: {
+      title: 'Recent ',
+      titleItalic: 'Projects',
+      subtitle: 'A showcase of our excellence in installation and repair across South Florida.',
+      categories: ['Windows', 'Doors', 'Commercial'],
+      projects: [
+        { title: 'Coral Gables Residence', category: 'Windows', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-1.webp' },
+        { title: 'Doral Modernization', category: 'Windows', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-2.webp' },
+        { title: 'Hollywood Villa', category: 'Windows', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-3.webp' },
+        { title: 'Luxury Apartment', category: 'Windows', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/8f4931ef0a00ead7d5a7a8fd0ab7afa0e01baf54/img/ventana-4.webp' },
+        { title: 'Ocean View Miami', category: 'Windows', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/aedba366ed50b36d71584a7d9c9f9ed5187dd8a0/img/ventana-5.webp' },
+        { title: 'Modern Residence', category: 'Windows', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-6.webp' },
+        
+        { title: 'Miami Beach Condo', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-1.webp' },
+        { title: 'Kendall Sliding Systems', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-2.webp' },
+        { title: 'Elegant Main Entrance', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-3.webp' },
+        { title: 'Premium Security Doors', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-4.webp' },
+        { title: 'Terrace Access', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-5.webp' },
+        { title: 'Impact Sliding Door', category: 'Doors', image: 'https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/puerta-6.webp' },
+        
+        { title: 'Miami Commercial Building', category: 'Commercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840323?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
+        { title: 'Local Distribution Center', category: 'Commercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840336?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' },
+        { title: 'Business Center', category: 'Commercial', image: '', videoUrl: 'https://player.vimeo.com/video/1190840346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479' }
+      ]
+    },
+    areasServed: {
+      title: 'Areas We Serve',
+      subtitle: 'Proudly serving residential and commercial clients across South Florida.',
+      cities: ['Homestead', 'Miami', 'Kendall', 'Hialeah', 'Doral', 'Hollywood', 'Pembroke Pines', 'Miramar', 'Davie', 'Weston', 'Plantation', 'Fort Lauderdale']
     },
     cta: {
       title: 'Ready To Upgrade Your Home?',
@@ -238,7 +309,16 @@ export const translations = {
       projects: 'Recent Projects'
     },
     footer: {
-      rights: '© 2026 JCH Impact Specialists. All rights reserved. Licensed Contractor #CGC1234567. Serving Miami-Dade, Broward, and Palm Beach counties.'
+      address: 'Hollywood, Florida',
+      serviceArea: 'Homestead to Fort Lauderdale',
+      contact: 'Contact',
+      serviceTitle: 'Service Area',
+      rights: '© 2026 JCH.Impact. All rights reserved.'
+    },
+    seo: {
+      title: 'Impact Windows & Doors Miami & South Florida | JCH.Impact',
+      description: 'Licensed specialists in impact window and door installation in Miami, Hollywood, and Fort Lauderdale. Professional sealing and repairs. Free Estimates!',
+      keywords: 'impact windows miami, impact doors florida, hurricane protection, window installation, professional caulking florida, JCH Impact',
     }
   }
 };
