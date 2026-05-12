@@ -13,6 +13,7 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "JCH.Impact",
+    "logo": "https://raw.githubusercontent.com/websprintt/JCH-Impact/fb1f6066859f1a3149320d5a12860968dd59f495/img/Logo%20solo%20sin%20fondo.png",
     "image": "https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-1.webp",
     "description": seo.description,
     "address": {
@@ -77,6 +78,7 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="keywords" content={seo.keywords} />
+      <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/websprintt/JCH-Impact/fb1f6066859f1a3149320d5a12860968dd59f495/img/Logo%20solo%20sin%20fondo.png" />
       <html lang={lang} />
 
       {/* Open Graph / Facebook */}
