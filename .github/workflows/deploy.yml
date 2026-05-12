@@ -5,6 +5,11 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+# Esto evita el error de "Multiple artifacts" al cancelar ejecuciones previas
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pages: write
@@ -21,6 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm' # Optimiza la velocidad de instalación
 
       - name: Instalar dependencias
         run: npm install
@@ -31,6 +37,7 @@ jobs:
       - name: Subir artefacto para Pages
         uses: actions/upload-pages-artifact@v3
         with:
+          # Vite genera los archivos listos para la web en la carpeta 'dist'
           path: './dist'
 
       - name: Desplegar en GitHub Pages
