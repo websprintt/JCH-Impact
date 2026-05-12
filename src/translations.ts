@@ -2,9 +2,9 @@
 export type Language = 'es' | 'en';
 
 export const contactInfo = {
-  // Base64 encoded versions of 7862345403
-  phone: 'Nzg2MjM0NTQwMw==',
-  whatsappNumber: 'Nzg2MjM0NTQwMw==',
+  // Base64 encoded versions of +17862345403
+  phone: 'KzE3ODYyMzQ1NDAz',
+  whatsappNumber: 'KzE3ODYyMzQ1NDAz',
   email: 'SmFhemllbGdibGFuY29AZ21haWwuY29t', // Jaazielgblanco@gmail.com
 };
 

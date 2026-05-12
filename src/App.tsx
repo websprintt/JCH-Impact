@@ -83,10 +83,10 @@ const TopBar = React.memo(({ lang }: { lang: Language }) => {
             onClick={(e) => {
               e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
             }}
-            href={`tel:${contactInfo.phone}`} 
+            href={`tel:${decode(contactInfo.phone)}`} 
             className="hover:underline"
           >
-            (786) 234-5403
+            +1 (786) 234-5403
           </a>
         </div>
         <div className="hidden sm:block h-3 w-px bg-brand-dark/20" />
@@ -126,7 +126,7 @@ const FloatingWhatsApp = ({ lang }: { lang: Language }) => {
              const decoded = decode(contactInfo.whatsappNumber);
              e.currentTarget.href = `https://wa.me/${decoded}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`;
           }}
-          href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
+          href={`https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center group"
@@ -224,7 +224,7 @@ const Navbar = React.memo(({ lang, setLang }: { lang: Language, setLang: (l: Lan
             onClick={(e) => {
               e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
             }}
-            href={`tel:${contactInfo.phone}`} 
+            href={`tel:${decode(contactInfo.phone)}`} 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 bg-brand-gold text-brand-dark px-5 py-2.5 rounded-full hover:bg-brand-gold/90 transition-all font-bold shadow-lg shadow-brand-gold/20"
@@ -271,7 +271,7 @@ const Navbar = React.memo(({ lang, setLang }: { lang: Language, setLang: (l: Lan
                 onClick={(e) => {
                   e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
                 }}
-                href={`tel:${contactInfo.phone}`} 
+                href={`tel:${decode(contactInfo.phone)}`} 
                 className="flex items-center justify-center gap-2 bg-brand-gold text-brand-dark px-6 py-5 rounded-xl font-bold min-h-[56px]"
               >
                 <Phone size={20} />
@@ -287,7 +287,7 @@ const Navbar = React.memo(({ lang, setLang }: { lang: Language, setLang: (l: Lan
                 onClick={(e) => {
                    e.currentTarget.href = `https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`;
                 }}
-                href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
+                href={`https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-5 rounded-xl font-bold min-h-[56px]"
@@ -372,7 +372,7 @@ const Hero = ({ lang }: { lang: Language }) => {
                    const decoded = decode(contactInfo.whatsappNumber);
                    e.currentTarget.href = `https://wa.me/${decoded}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`;
                 }}
-                href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
+                href={`https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -5 }}
@@ -392,7 +392,7 @@ const Hero = ({ lang }: { lang: Language }) => {
                 onClick={(e) => {
                   e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
                 }}
-                href={`tel:${contactInfo.phone}`}
+                href={`tel:${decode(contactInfo.phone)}`}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center gap-2 bg-white/5 border border-brand-cream/20 text-brand-cream px-8 py-4 rounded-xl font-bold text-lg transition-all backdrop-blur-sm"
@@ -991,7 +991,7 @@ const Gallery = ({ lang }: { lang: Language }) => {
             onClick={(e) => {
               e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
             }}
-            href={`tel:${contactInfo.phone}`}
+            href={`tel:${decode(contactInfo.phone)}`}
             className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-10 py-5 rounded-2xl font-bold text-lg hover:border-brand-gold transition-all"
           >
             <Phone size={20} className="text-brand-gold" />
@@ -1129,7 +1129,7 @@ const ContactCTA = ({ lang }: { lang: Language }) => {
                   onClick={(e) => {
                     e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
                   }}
-                  href={`tel:${contactInfo.phone}`}
+                  href={`tel:${decode(contactInfo.phone)}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center justify-center gap-3 bg-brand-gold text-brand-dark px-10 py-5 rounded-2xl font-bold text-xl transition-all shadow-2xl shadow-brand-gold/40"
@@ -1149,7 +1149,7 @@ const ContactCTA = ({ lang }: { lang: Language }) => {
                     const decoded = decode(contactInfo.whatsappNumber);
                     e.currentTarget.href = `https://wa.me/${decoded}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`;
                   }}
-                  href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
+                  href={`https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
@@ -1176,7 +1176,7 @@ const ContactCTA = ({ lang }: { lang: Language }) => {
                     // @ts-ignore - translations structure is known
                     e.currentTarget.href = `https://wa.me/${decoded}?text=${encodeURIComponent(translations[lang].whatsapp.financeMessage)}`;
                   }}
-                  href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
+                  href={`https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 underline decoration-brand-gold underline-offset-4 cursor-pointer text-brand-cream hover:text-brand-gold transition-colors"
@@ -1235,13 +1235,13 @@ const Footer = ({ lang }: { lang: Language }) => {
                               onClick={(e) => {
                                 e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
                               }}
-                              href={`tel:${contactInfo.phone}`}
+                              href={`tel:${decode(contactInfo.phone)}`}
                               className="flex items-center gap-3 group text-brand-cream/70 hover:text-brand-gold transition-colors"
                             >
                                 <div className="w-9 h-9 bg-brand-gold/10 rounded-xl flex items-center justify-center group-hover:bg-brand-gold group-hover:text-brand-dark transition-all shrink-0">
                                     <Phone size={18} />
                                 </div>
-                                <span className="font-bold text-lg">(786) 234-5403</span>
+                                <span className="font-bold text-lg">+1 (786) 234-5403</span>
                             </a>
                             <a 
                               href={`mailto:${decode(contactInfo.email)}`}
@@ -1288,7 +1288,7 @@ const Footer = ({ lang }: { lang: Language }) => {
                               onClick={(e) => {
                                 e.currentTarget.href = `tel:${decode(contactInfo.phone)}`;
                               }}
-                              href={`tel:${contactInfo.phone}`}
+                              href={`tel:${decode(contactInfo.phone)}`}
                               whileHover={{ x: 5 }}
                               className="flex items-center justify-center gap-3 bg-brand-gold text-brand-dark py-4 rounded-xl font-bold transition-all shadow-xl shadow-brand-gold/10"
                             >
@@ -1307,7 +1307,7 @@ const Footer = ({ lang }: { lang: Language }) => {
                                 const decoded = decode(contactInfo.whatsappNumber);
                                 e.currentTarget.href = `https://wa.me/${decoded}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`;
                               }}
-                              href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
+                              href={`https://wa.me/${decode(contactInfo.whatsappNumber)}?text=${encodeURIComponent(translations[lang].whatsapp.message)}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               whileHover={{ x: 5 }}
