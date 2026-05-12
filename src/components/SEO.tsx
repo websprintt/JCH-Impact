@@ -26,7 +26,7 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
       "latitude": 26.0112,
       "longitude": -80.1495
     },
-    "url": "https://ais-dev-cy6qiq6liliiqbvbe7sc5b-372441323539.europe-west2.run.app",
+    "url": "https://jchimpact.com",
     "telephone": "+17862345403",
     "areaServed": translations[lang].areasServed.cities.map(city => ({
       "@type": "City",
@@ -92,7 +92,7 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
       <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/JCH-Impact/dc9b72ffff3937b8917933fce8714a0bdf89e19a/img/ventana-1.webp" />
 
       {/* Canonical URL */}
-      <link rel="canonical" href="https://ais-dev-cy6qiq6liliiqbvbe7sc5b-372441323539.europe-west2.run.app" />
+      <link rel="canonical" href="https://jchimpact.com" />
 
       {/* Structured Data */}
       <script type="application/ld+json">
